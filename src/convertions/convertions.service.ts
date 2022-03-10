@@ -11,8 +11,10 @@ export class ConvertionsService {
    return "convertion completed"
   }
 
-  findAll() {
-    return `This action returns all convertions`;
+  async findAll() : Promise<Convertion[]>{
+     const convertions=Convertion.find();
+     return convertions;
+    
   }
 
   findOne(id: number) {
